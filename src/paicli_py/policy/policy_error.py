@@ -1,0 +1,3 @@
+class PolicyError(RuntimeError):
+    pass
+

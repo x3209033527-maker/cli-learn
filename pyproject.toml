@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paicli-py"
+version = "0.1.0"
+description = "Python migration scaffold for PaiCLI core agent runtime"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+paicli-py = "paicli_py.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+paicli_py = ["prompt/resources/**/*.md", "skill/resources/**/*.md"]
